@@ -1,0 +1,570 @@
+2023-12-10T11:19:15+00:00 CRITICAL Uncaught Error: Failed opening required 'C:\xampp\htdocs\cuahangsach\wp-content\plugins\woocommerce/src/Internal/Utilities/COTMigrationUtil.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\cuahangsach\wp-content\plugins\jetpack\vendor\jetpack-autoloader\class-php-autoloader.php:90
+Stack trace:
+#0 [internal function]: Automattic\Jetpack\Autoloader\jpf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ12_9\al3_0_2\PHP_Autoloader::load_class('Automattic\\WooC...')
+#1 C:\xampp\htdocs\cuahangsach\wp-content\plugins\woocommerce\lib\packages\League\Container\Definition\Definition.php(211): class_exists('Automattic\\WooC...')
+#2 C:\xampp\htdocs\cuahangsach\wp-content\plugins\woocommerce\lib\packages\League\Container\Definition\DefinitionAggregate.php(94): Automattic\WooCommerce\Vendor\League\Container\Definition\Definition->resolve(false)
+#3 C:\xampp\htdocs\cuahangsach\wp-content\plugins\woocommerce\lib\packages\League\Container\Container.php(157): Automattic\WooCommerce\Vendor\League\Container\Definition\DefinitionAggregate->resolve('Automattic\\WooC...', false)
+#4 C:\xampp\htdocs\cuahangsach\wp-content\plugins\woocommerce\src\Internal\DependencyManagement\ExtendedContainer.php(158): Automattic\WooCommerce\Vendor\League\Container\Container->get('Automattic\\WooC...', false)
+#5 C:\xampp\htdocs\cuahangsach\wp-content\plugins\woocommerce\src\Container.php(110): Automattic\WooCommerce\Internal\DependencyManagement\ExtendedContainer->get('Automattic\\WooC...')
+#6 C:\xampp\htdocs\cuahangsach\wp-content\plugins\woocommerce\src\Utilities\OrderUtil.php(104): Automattic\WooCommerce\Container->get('Automattic\\WooC...')
+#7 C:\xampp\htdocs\cuahangsach\wp-content\plugins\woocommerce\src\Admin\API\Reports\Orders\Stats\DataStore.php(600): Automattic\WooCommerce\Utilities\OrderUtil::is_order(120, Array)
+#8 C:\xampp\htdocs\cuahangsach\wp-includes\class-wp-hook.php(326): Automattic\WooCommerce\Admin\API\Reports\Orders\Stats\DataStore::delete_order(120)
+#9 C:\xampp\htdocs\cuahangsach\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#10 C:\xampp\htdocs\cuahangsach\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#11 C:\xampp\htdocs\cuahangsach\wp-includes\post.php(6325): do_action('delete_post', 120, Object(WP_Post))
+#12 C:\xampp\htdocs\cuahangsach\wp-admin\includes\class-file-upload-upgrader.php(126): wp_delete_attachment(120)
+#13 C:\xampp\htdocs\cuahangsach\wp-admin\update.php(179): File_Upload_Upgrader->cleanup()
+#14 {main}
+  thrown in C:\xampp\htdocs\cuahangsach\wp-content\plugins\jetpack\vendor\jetpack-autoloader\class-php-autoloader.php on line 90
+
+2023-12-10T11:19:22+00:00 CRITICAL Uncaught Error: Class "Automattic\WooCommerce\Admin\Features\OnboardingTasks\Task" not found in C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\TaskList\CompleteSetupTask.php:18
+Stack trace:
+#0 C:\xampp\htdocs\cuahangsach\wp-content\plugins\jetpack\vendor\jetpack-autoloader\class-php-autoloader.php(90): require()
+#1 [internal function]: Automattic\Jetpack\Autoloader\jpf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ12_9\al3_0_2\PHP_Autoloader::load_class('Automattic\\WooC...')
+#2 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Internal\DependencyManagement\AbstractServiceProvider.php(73): class_implements('Automattic\\WooC...')
+#3 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Internal\DependencyManagement\CoreServiceProvider.php(300): Automattic\WooCommerce\GoogleListingsAndAds\Internal\DependencyManagement\AbstractServiceProvider->share_with_tags('Automattic\\WooC...')
+#4 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\vendor\league\container\src\ServiceProvider\ServiceProviderAggregate.php(102): Automattic\WooCommerce\GoogleListingsAndAds\Internal\DependencyManagement\CoreServiceProvider->register()
+#5 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\vendor\league\container\src\Container.php(172): Automattic\WooCommerce\GoogleListingsAndAds\Vendor\League\Container\ServiceProvider\ServiceProviderAggregate->register('Automattic\\WooC...')
+#6 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Container.php(90): Automattic\WooCommerce\GoogleListingsAndAds\Vendor\League\Container\Container->get('Automattic\\WooC...')
+#7 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Infrastructure\GoogleListingsAndAdsPlugin.php(105): Automattic\WooCommerce\GoogleListingsAndAds\Container->get('Automattic\\WooC...')
+#8 C:\xampp\htdocs\cuahangsach\wp-includes\class-wp-hook.php(324): Automattic\WooCommerce\GoogleListingsAndAds\Infrastructure\GoogleListingsAndAdsPlugin->Automattic\WooCommerce\GoogleListingsAndAds\Infrastructure\{closure}('')
+#9 C:\xampp\htdocs\cuahangsach\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#10 C:\xampp\htdocs\cuahangsach\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#11 C:\xampp\htdocs\cuahangsach\wp-settings.php(643): do_action('init')
+#12 C:\xampp\htdocs\cuahangsach\wp-config.php(96): require_once('C:\\xampp\\htdocs...')
+#13 C:\xampp\htdocs\cuahangsach\wp-load.php(50): require_once('C:\\xampp\\htdocs...')
+#14 C:\xampp\htdocs\cuahangsach\wp-admin\admin.php(34): require_once('C:\\xampp\\htdocs...')
+#15 C:\xampp\htdocs\cuahangsach\wp-admin\plugin-install.php(16): require_once('C:\\xampp\\htdocs...')
+#16 {main}
+  thrown in C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\TaskList\CompleteSetupTask.php on line 18
+
+2023-12-10T11:19:23+00:00 CRITICAL Uncaught Error: Class "Automattic\WooCommerce\Admin\Features\OnboardingTasks\Task" not found in C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\TaskList\CompleteSetupTask.php:18
+Stack trace:
+#0 C:\xampp\htdocs\cuahangsach\wp-content\plugins\jetpack\vendor\jetpack-autoloader\class-php-autoloader.php(90): require()
+#1 [internal function]: Automattic\Jetpack\Autoloader\jpf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ12_9\al3_0_2\PHP_Autoloader::load_class('Automattic\\WooC...')
+#2 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Internal\DependencyManagement\AbstractServiceProvider.php(73): class_implements('Automattic\\WooC...')
+#3 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Internal\DependencyManagement\CoreServiceProvider.php(300): Automattic\WooCommerce\GoogleListingsAndAds\Internal\DependencyManagement\AbstractServiceProvider->share_with_tags('Automattic\\WooC...')
+#4 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\vendor\league\container\src\ServiceProvider\ServiceProviderAggregate.php(102): Automattic\WooCommerce\GoogleListingsAndAds\Internal\DependencyManagement\CoreServiceProvider->register()
+#5 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\vendor\league\container\src\Container.php(172): Automattic\WooCommerce\GoogleListingsAndAds\Vendor\League\Container\ServiceProvider\ServiceProviderAggregate->register('Automattic\\WooC...')
+#6 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Container.php(90): Automattic\WooCommerce\GoogleListingsAndAds\Vendor\League\Container\Container->get('Automattic\\WooC...')
+#7 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Infrastructure\GoogleListingsAndAdsPlugin.php(105): Automattic\WooCommerce\GoogleListingsAndAds\Container->get('Automattic\\WooC...')
+#8 C:\xampp\htdocs\cuahangsach\wp-includes\class-wp-hook.php(324): Automattic\WooCommerce\GoogleListingsAndAds\Infrastructure\GoogleListingsAndAdsPlugin->Automattic\WooCommerce\GoogleListingsAndAds\Infrastructure\{closure}('')
+#9 C:\xampp\htdocs\cuahangsach\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#10 C:\xampp\htdocs\cuahangsach\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#11 C:\xampp\htdocs\cuahangsach\wp-settings.php(643): do_action('init')
+#12 C:\xampp\htdocs\cuahangsach\wp-config.php(96): require_once('C:\\xampp\\htdocs...')
+#13 C:\xampp\htdocs\cuahangsach\wp-load.php(50): require_once('C:\\xampp\\htdocs...')
+#14 C:\xampp\htdocs\cuahangsach\wp-admin\admin.php(34): require_once('C:\\xampp\\htdocs...')
+#15 C:\xampp\htdocs\cuahangsach\wp-admin\update.php(16): require_once('C:\\xampp\\htdocs...')
+#16 {main}
+  thrown in C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\TaskList\CompleteSetupTask.php on line 18
+
+2023-12-10T11:19:25+00:00 CRITICAL Uncaught Error: Class "Automattic\WooCommerce\Admin\Features\OnboardingTasks\Task" not found in C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\TaskList\CompleteSetupTask.php:18
+Stack trace:
+#0 C:\xampp\htdocs\cuahangsach\wp-content\plugins\jetpack\vendor\jetpack-autoloader\class-php-autoloader.php(90): require()
+#1 [internal function]: Automattic\Jetpack\Autoloader\jpf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ12_9\al3_0_2\PHP_Autoloader::load_class('Automattic\\WooC...')
+#2 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Internal\DependencyManagement\AbstractServiceProvider.php(73): class_implements('Automattic\\WooC...')
+#3 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Internal\DependencyManagement\CoreServiceProvider.php(300): Automattic\WooCommerce\GoogleListingsAndAds\Internal\DependencyManagement\AbstractServiceProvider->share_with_tags('Automattic\\WooC...')
+#4 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\vendor\league\container\src\ServiceProvider\ServiceProviderAggregate.php(102): Automattic\WooCommerce\GoogleListingsAndAds\Internal\DependencyManagement\CoreServiceProvider->register()
+#5 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\vendor\league\container\src\Container.php(172): Automattic\WooCommerce\GoogleListingsAndAds\Vendor\League\Container\ServiceProvider\ServiceProviderAggregate->register('Automattic\\WooC...')
+#6 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Container.php(90): Automattic\WooCommerce\GoogleListingsAndAds\Vendor\League\Container\Container->get('Automattic\\WooC...')
+#7 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Infrastructure\GoogleListingsAndAdsPlugin.php(105): Automattic\WooCommerce\GoogleListingsAndAds\Container->get('Automattic\\WooC...')
+#8 C:\xampp\htdocs\cuahangsach\wp-includes\class-wp-hook.php(324): Automattic\WooCommerce\GoogleListingsAndAds\Infrastructure\GoogleListingsAndAdsPlugin->Automattic\WooCommerce\GoogleListingsAndAds\Infrastructure\{closure}('')
+#9 C:\xampp\htdocs\cuahangsach\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#10 C:\xampp\htdocs\cuahangsach\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#11 C:\xampp\htdocs\cuahangsach\wp-settings.php(643): do_action('init')
+#12 C:\xampp\htdocs\cuahangsach\wp-config.php(96): require_once('C:\\xampp\\htdocs...')
+#13 C:\xampp\htdocs\cuahangsach\wp-load.php(50): require_once('C:\\xampp\\htdocs...')
+#14 C:\xampp\htdocs\cuahangsach\wp-admin\admin.php(34): require_once('C:\\xampp\\htdocs...')
+#15 C:\xampp\htdocs\cuahangsach\wp-admin\update.php(16): require_once('C:\\xampp\\htdocs...')
+#16 {main}
+  thrown in C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\TaskList\CompleteSetupTask.php on line 18
+
+2023-12-10T11:19:31+00:00 CRITICAL Uncaught Error: Class "Automattic\WooCommerce\Admin\Features\OnboardingTasks\Task" not found in C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\TaskList\CompleteSetupTask.php:18
+Stack trace:
+#0 C:\xampp\htdocs\cuahangsach\wp-content\plugins\jetpack\vendor\jetpack-autoloader\class-php-autoloader.php(90): require()
+#1 [internal function]: Automattic\Jetpack\Autoloader\jpf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ12_9\al3_0_2\PHP_Autoloader::load_class('Automattic\\WooC...')
+#2 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Internal\DependencyManagement\AbstractServiceProvider.php(73): class_implements('Automattic\\WooC...')
+#3 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Internal\DependencyManagement\CoreServiceProvider.php(300): Automattic\WooCommerce\GoogleListingsAndAds\Internal\DependencyManagement\AbstractServiceProvider->share_with_tags('Automattic\\WooC...')
+#4 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\vendor\league\container\src\ServiceProvider\ServiceProviderAggregate.php(102): Automattic\WooCommerce\GoogleListingsAndAds\Internal\DependencyManagement\CoreServiceProvider->register()
+#5 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\vendor\league\container\src\Container.php(172): Automattic\WooCommerce\GoogleListingsAndAds\Vendor\League\Container\ServiceProvider\ServiceProviderAggregate->register('Automattic\\WooC...')
+#6 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Container.php(90): Automattic\WooCommerce\GoogleListingsAndAds\Vendor\League\Container\Container->get('Automattic\\WooC...')
+#7 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Infrastructure\GoogleListingsAndAdsPlugin.php(105): Automattic\WooCommerce\GoogleListingsAndAds\Container->get('Automattic\\WooC...')
+#8 C:\xampp\htdocs\cuahangsach\wp-includes\class-wp-hook.php(324): Automattic\WooCommerce\GoogleListingsAndAds\Infrastructure\GoogleListingsAndAdsPlugin->Automattic\WooCommerce\GoogleListingsAndAds\Infrastructure\{closure}('')
+#9 C:\xampp\htdocs\cuahangsach\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#10 C:\xampp\htdocs\cuahangsach\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#11 C:\xampp\htdocs\cuahangsach\wp-settings.php(643): do_action('init')
+#12 C:\xampp\htdocs\cuahangsach\wp-config.php(96): require_once('C:\\xampp\\htdocs...')
+#13 C:\xampp\htdocs\cuahangsach\wp-load.php(50): require_once('C:\\xampp\\htdocs...')
+#14 C:\xampp\htdocs\cuahangsach\wp-admin\admin.php(34): require_once('C:\\xampp\\htdocs...')
+#15 C:\xampp\htdocs\cuahangsach\wp-admin\index.php(10): require_once('C:\\xampp\\htdocs...')
+#16 {main}
+  thrown in C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\TaskList\CompleteSetupTask.php on line 18
+
+2023-12-10T11:19:42+00:00 CRITICAL Uncaught Error: Class "Automattic\WooCommerce\Admin\Features\OnboardingTasks\Task" not found in C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\TaskList\CompleteSetupTask.php:18
+Stack trace:
+#0 C:\xampp\htdocs\cuahangsach\wp-content\plugins\jetpack\vendor\jetpack-autoloader\class-php-autoloader.php(90): require()
+#1 [internal function]: Automattic\Jetpack\Autoloader\jpf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ12_9\al3_0_2\PHP_Autoloader::load_class('Automattic\\WooC...')
+#2 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Internal\DependencyManagement\AbstractServiceProvider.php(73): class_implements('Automattic\\WooC...')
+#3 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Internal\DependencyManagement\CoreServiceProvider.php(300): Automattic\WooCommerce\GoogleListingsAndAds\Internal\DependencyManagement\AbstractServiceProvider->share_with_tags('Automattic\\WooC...')
+#4 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\vendor\league\container\src\ServiceProvider\ServiceProviderAggregate.php(102): Automattic\WooCommerce\GoogleListingsAndAds\Internal\DependencyManagement\CoreServiceProvider->register()
+#5 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\vendor\league\container\src\Container.php(172): Automattic\WooCommerce\GoogleListingsAndAds\Vendor\League\Container\ServiceProvider\ServiceProviderAggregate->register('Automattic\\WooC...')
+#6 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Container.php(90): Automattic\WooCommerce\GoogleListingsAndAds\Vendor\League\Container\Container->get('Automattic\\WooC...')
+#7 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Infrastructure\GoogleListingsAndAdsPlugin.php(105): Automattic\WooCommerce\GoogleListingsAndAds\Container->get('Automattic\\WooC...')
+#8 C:\xampp\htdocs\cuahangsach\wp-includes\class-wp-hook.php(324): Automattic\WooCommerce\GoogleListingsAndAds\Infrastructure\GoogleListingsAndAdsPlugin->Automattic\WooCommerce\GoogleListingsAndAds\Infrastructure\{closure}('')
+#9 C:\xampp\htdocs\cuahangsach\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#10 C:\xampp\htdocs\cuahangsach\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#11 C:\xampp\htdocs\cuahangsach\wp-settings.php(643): do_action('init')
+#12 C:\xampp\htdocs\cuahangsach\wp-config.php(96): require_once('C:\\xampp\\htdocs...')
+#13 C:\xampp\htdocs\cuahangsach\wp-load.php(50): require_once('C:\\xampp\\htdocs...')
+#14 C:\xampp\htdocs\cuahangsach\wp-blog-header.php(13): require_once('C:\\xampp\\htdocs...')
+#15 C:\xampp\htdocs\cuahangsach\index.php(17): require('C:\\xampp\\htdocs...')
+#16 {main}
+  thrown in C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\TaskList\CompleteSetupTask.php on line 18
+
+2023-12-10T11:19:52+00:00 CRITICAL Uncaught Error: Class "Automattic\WooCommerce\Admin\Features\OnboardingTasks\Task" not found in C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\TaskList\CompleteSetupTask.php:18
+Stack trace:
+#0 C:\xampp\htdocs\cuahangsach\wp-content\plugins\jetpack\vendor\jetpack-autoloader\class-php-autoloader.php(90): require()
+#1 [internal function]: Automattic\Jetpack\Autoloader\jpf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ12_9\al3_0_2\PHP_Autoloader::load_class('Automattic\\WooC...')
+#2 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Internal\DependencyManagement\AbstractServiceProvider.php(73): class_implements('Automattic\\WooC...')
+#3 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Internal\DependencyManagement\CoreServiceProvider.php(300): Automattic\WooCommerce\GoogleListingsAndAds\Internal\DependencyManagement\AbstractServiceProvider->share_with_tags('Automattic\\WooC...')
+#4 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\vendor\league\container\src\ServiceProvider\ServiceProviderAggregate.php(102): Automattic\WooCommerce\GoogleListingsAndAds\Internal\DependencyManagement\CoreServiceProvider->register()
+#5 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\vendor\league\container\src\Container.php(172): Automattic\WooCommerce\GoogleListingsAndAds\Vendor\League\Container\ServiceProvider\ServiceProviderAggregate->register('Automattic\\WooC...')
+#6 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Container.php(90): Automattic\WooCommerce\GoogleListingsAndAds\Vendor\League\Container\Container->get('Automattic\\WooC...')
+#7 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Infrastructure\GoogleListingsAndAdsPlugin.php(105): Automattic\WooCommerce\GoogleListingsAndAds\Container->get('Automattic\\WooC...')
+#8 C:\xampp\htdocs\cuahangsach\wp-includes\class-wp-hook.php(324): Automattic\WooCommerce\GoogleListingsAndAds\Infrastructure\GoogleListingsAndAdsPlugin->Automattic\WooCommerce\GoogleListingsAndAds\Infrastructure\{closure}('')
+#9 C:\xampp\htdocs\cuahangsach\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#10 C:\xampp\htdocs\cuahangsach\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#11 C:\xampp\htdocs\cuahangsach\wp-settings.php(643): do_action('init')
+#12 C:\xampp\htdocs\cuahangsach\wp-config.php(96): require_once('C:\\xampp\\htdocs...')
+#13 C:\xampp\htdocs\cuahangsach\wp-load.php(50): require_once('C:\\xampp\\htdocs...')
+#14 C:\xampp\htdocs\cuahangsach\wp-admin\admin.php(34): require_once('C:\\xampp\\htdocs...')
+#15 C:\xampp\htdocs\cuahangsach\wp-admin\nav-menus.php(13): require_once('C:\\xampp\\htdocs...')
+#16 {main}
+  thrown in C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\TaskList\CompleteSetupTask.php on line 18
+
+2023-12-10T11:19:55+00:00 CRITICAL Uncaught Error: Class "Automattic\WooCommerce\Admin\Features\OnboardingTasks\Task" not found in C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\TaskList\CompleteSetupTask.php:18
+Stack trace:
+#0 C:\xampp\htdocs\cuahangsach\wp-content\plugins\jetpack\vendor\jetpack-autoloader\class-php-autoloader.php(90): require()
+#1 [internal function]: Automattic\Jetpack\Autoloader\jpf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ12_9\al3_0_2\PHP_Autoloader::load_class('Automattic\\WooC...')
+#2 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Internal\DependencyManagement\AbstractServiceProvider.php(73): class_implements('Automattic\\WooC...')
+#3 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Internal\DependencyManagement\CoreServiceProvider.php(300): Automattic\WooCommerce\GoogleListingsAndAds\Internal\DependencyManagement\AbstractServiceProvider->share_with_tags('Automattic\\WooC...')
+#4 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\vendor\league\container\src\ServiceProvider\ServiceProviderAggregate.php(102): Automattic\WooCommerce\GoogleListingsAndAds\Internal\DependencyManagement\CoreServiceProvider->register()
+#5 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\vendor\league\container\src\Container.php(172): Automattic\WooCommerce\GoogleListingsAndAds\Vendor\League\Container\ServiceProvider\ServiceProviderAggregate->register('Automattic\\WooC...')
+#6 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Container.php(90): Automattic\WooCommerce\GoogleListingsAndAds\Vendor\League\Container\Container->get('Automattic\\WooC...')
+#7 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Infrastructure\GoogleListingsAndAdsPlugin.php(105): Automattic\WooCommerce\GoogleListingsAndAds\Container->get('Automattic\\WooC...')
+#8 C:\xampp\htdocs\cuahangsach\wp-includes\class-wp-hook.php(324): Automattic\WooCommerce\GoogleListingsAndAds\Infrastructure\GoogleListingsAndAdsPlugin->Automattic\WooCommerce\GoogleListingsAndAds\Infrastructure\{closure}('')
+#9 C:\xampp\htdocs\cuahangsach\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#10 C:\xampp\htdocs\cuahangsach\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#11 C:\xampp\htdocs\cuahangsach\wp-settings.php(643): do_action('init')
+#12 C:\xampp\htdocs\cuahangsach\wp-config.php(96): require_once('C:\\xampp\\htdocs...')
+#13 C:\xampp\htdocs\cuahangsach\wp-load.php(50): require_once('C:\\xampp\\htdocs...')
+#14 C:\xampp\htdocs\cuahangsach\wp-admin\admin.php(34): require_once('C:\\xampp\\htdocs...')
+#15 C:\xampp\htdocs\cuahangsach\wp-admin\index.php(10): require_once('C:\\xampp\\htdocs...')
+#16 {main}
+  thrown in C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\TaskList\CompleteSetupTask.php on line 18
+
+2023-12-10T11:20:18+00:00 CRITICAL Uncaught Error: Class "Automattic\WooCommerce\Admin\Features\OnboardingTasks\Task" not found in C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\TaskList\CompleteSetupTask.php:18
+Stack trace:
+#0 C:\xampp\htdocs\cuahangsach\wp-content\plugins\jetpack\vendor\jetpack-autoloader\class-php-autoloader.php(90): require()
+#1 [internal function]: Automattic\Jetpack\Autoloader\jpf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ12_9\al3_0_2\PHP_Autoloader::load_class('Automattic\\WooC...')
+#2 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Internal\DependencyManagement\AbstractServiceProvider.php(73): class_implements('Automattic\\WooC...')
+#3 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Internal\DependencyManagement\CoreServiceProvider.php(300): Automattic\WooCommerce\GoogleListingsAndAds\Internal\DependencyManagement\AbstractServiceProvider->share_with_tags('Automattic\\WooC...')
+#4 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\vendor\league\container\src\ServiceProvider\ServiceProviderAggregate.php(102): Automattic\WooCommerce\GoogleListingsAndAds\Internal\DependencyManagement\CoreServiceProvider->register()
+#5 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\vendor\league\container\src\Container.php(172): Automattic\WooCommerce\GoogleListingsAndAds\Vendor\League\Container\ServiceProvider\ServiceProviderAggregate->register('Automattic\\WooC...')
+#6 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Container.php(90): Automattic\WooCommerce\GoogleListingsAndAds\Vendor\League\Container\Container->get('Automattic\\WooC...')
+#7 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Infrastructure\GoogleListingsAndAdsPlugin.php(105): Automattic\WooCommerce\GoogleListingsAndAds\Container->get('Automattic\\WooC...')
+#8 C:\xampp\htdocs\cuahangsach\wp-includes\class-wp-hook.php(324): Automattic\WooCommerce\GoogleListingsAndAds\Infrastructure\GoogleListingsAndAdsPlugin->Automattic\WooCommerce\GoogleListingsAndAds\Infrastructure\{closure}('')
+#9 C:\xampp\htdocs\cuahangsach\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#10 C:\xampp\htdocs\cuahangsach\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#11 C:\xampp\htdocs\cuahangsach\wp-settings.php(643): do_action('init')
+#12 C:\xampp\htdocs\cuahangsach\wp-config.php(96): require_once('C:\\xampp\\htdocs...')
+#13 C:\xampp\htdocs\cuahangsach\wp-load.php(50): require_once('C:\\xampp\\htdocs...')
+#14 C:\xampp\htdocs\cuahangsach\wp-blog-header.php(13): require_once('C:\\xampp\\htdocs...')
+#15 C:\xampp\htdocs\cuahangsach\index.php(17): require('C:\\xampp\\htdocs...')
+#16 {main}
+  thrown in C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\TaskList\CompleteSetupTask.php on line 18
+
+2023-12-10T11:20:39+00:00 CRITICAL Uncaught Error: Class "Automattic\WooCommerce\Admin\Features\OnboardingTasks\Task" not found in C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\TaskList\CompleteSetupTask.php:18
+Stack trace:
+#0 C:\xampp\htdocs\cuahangsach\wp-content\plugins\jetpack\vendor\jetpack-autoloader\class-php-autoloader.php(90): require()
+#1 [internal function]: Automattic\Jetpack\Autoloader\jpf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ12_9\al3_0_2\PHP_Autoloader::load_class('Automattic\\WooC...')
+#2 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Internal\DependencyManagement\AbstractServiceProvider.php(73): class_implements('Automattic\\WooC...')
+#3 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Internal\DependencyManagement\CoreServiceProvider.php(300): Automattic\WooCommerce\GoogleListingsAndAds\Internal\DependencyManagement\AbstractServiceProvider->share_with_tags('Automattic\\WooC...')
+#4 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\vendor\league\container\src\ServiceProvider\ServiceProviderAggregate.php(102): Automattic\WooCommerce\GoogleListingsAndAds\Internal\DependencyManagement\CoreServiceProvider->register()
+#5 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\vendor\league\container\src\Container.php(172): Automattic\WooCommerce\GoogleListingsAndAds\Vendor\League\Container\ServiceProvider\ServiceProviderAggregate->register('Automattic\\WooC...')
+#6 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Container.php(90): Automattic\WooCommerce\GoogleListingsAndAds\Vendor\League\Container\Container->get('Automattic\\WooC...')
+#7 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Infrastructure\GoogleListingsAndAdsPlugin.php(105): Automattic\WooCommerce\GoogleListingsAndAds\Container->get('Automattic\\WooC...')
+#8 C:\xampp\htdocs\cuahangsach\wp-includes\class-wp-hook.php(324): Automattic\WooCommerce\GoogleListingsAndAds\Infrastructure\GoogleListingsAndAdsPlugin->Automattic\WooCommerce\GoogleListingsAndAds\Infrastructure\{closure}('')
+#9 C:\xampp\htdocs\cuahangsach\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#10 C:\xampp\htdocs\cuahangsach\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#11 C:\xampp\htdocs\cuahangsach\wp-settings.php(643): do_action('init')
+#12 C:\xampp\htdocs\cuahangsach\wp-config.php(96): require_once('C:\\xampp\\htdocs...')
+#13 C:\xampp\htdocs\cuahangsach\wp-load.php(50): require_once('C:\\xampp\\htdocs...')
+#14 C:\xampp\htdocs\cuahangsach\wp-blog-header.php(13): require_once('C:\\xampp\\htdocs...')
+#15 C:\xampp\htdocs\cuahangsach\index.php(17): require('C:\\xampp\\htdocs...')
+#16 {main}
+  thrown in C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\TaskList\CompleteSetupTask.php on line 18
+
+2023-12-10T11:21:01+00:00 CRITICAL Uncaught Error: Class "Automattic\WooCommerce\Admin\Features\OnboardingTasks\Task" not found in C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\TaskList\CompleteSetupTask.php:18
+Stack trace:
+#0 C:\xampp\htdocs\cuahangsach\wp-content\plugins\jetpack\vendor\jetpack-autoloader\class-php-autoloader.php(90): require()
+#1 [internal function]: Automattic\Jetpack\Autoloader\jpf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ12_9\al3_0_2\PHP_Autoloader::load_class('Automattic\\WooC...')
+#2 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Internal\DependencyManagement\AbstractServiceProvider.php(73): class_implements('Automattic\\WooC...')
+#3 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Internal\DependencyManagement\CoreServiceProvider.php(300): Automattic\WooCommerce\GoogleListingsAndAds\Internal\DependencyManagement\AbstractServiceProvider->share_with_tags('Automattic\\WooC...')
+#4 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\vendor\league\container\src\ServiceProvider\ServiceProviderAggregate.php(102): Automattic\WooCommerce\GoogleListingsAndAds\Internal\DependencyManagement\CoreServiceProvider->register()
+#5 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\vendor\league\container\src\Container.php(172): Automattic\WooCommerce\GoogleListingsAndAds\Vendor\League\Container\ServiceProvider\ServiceProviderAggregate->register('Automattic\\WooC...')
+#6 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Container.php(90): Automattic\WooCommerce\GoogleListingsAndAds\Vendor\League\Container\Container->get('Automattic\\WooC...')
+#7 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Infrastructure\GoogleListingsAndAdsPlugin.php(105): Automattic\WooCommerce\GoogleListingsAndAds\Container->get('Automattic\\WooC...')
+#8 C:\xampp\htdocs\cuahangsach\wp-includes\class-wp-hook.php(324): Automattic\WooCommerce\GoogleListingsAndAds\Infrastructure\GoogleListingsAndAdsPlugin->Automattic\WooCommerce\GoogleListingsAndAds\Infrastructure\{closure}('')
+#9 C:\xampp\htdocs\cuahangsach\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#10 C:\xampp\htdocs\cuahangsach\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#11 C:\xampp\htdocs\cuahangsach\wp-settings.php(643): do_action('init')
+#12 C:\xampp\htdocs\cuahangsach\wp-config.php(96): require_once('C:\\xampp\\htdocs...')
+#13 C:\xampp\htdocs\cuahangsach\wp-load.php(50): require_once('C:\\xampp\\htdocs...')
+#14 C:\xampp\htdocs\cuahangsach\wp-blog-header.php(13): require_once('C:\\xampp\\htdocs...')
+#15 C:\xampp\htdocs\cuahangsach\index.php(17): require('C:\\xampp\\htdocs...')
+#16 {main}
+  thrown in C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\TaskList\CompleteSetupTask.php on line 18
+
+2023-12-10T11:23:13+00:00 CRITICAL Uncaught Error: Class "Automattic\WooCommerce\Admin\Features\OnboardingTasks\Task" not found in C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\TaskList\CompleteSetupTask.php:18
+Stack trace:
+#0 C:\xampp\htdocs\cuahangsach\wp-content\plugins\jetpack\vendor\jetpack-autoloader\class-php-autoloader.php(90): require()
+#1 [internal function]: Automattic\Jetpack\Autoloader\jpf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ12_9\al3_0_2\PHP_Autoloader::load_class('Automattic\\WooC...')
+#2 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Internal\DependencyManagement\AbstractServiceProvider.php(73): class_implements('Automattic\\WooC...')
+#3 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Internal\DependencyManagement\CoreServiceProvider.php(300): Automattic\WooCommerce\GoogleListingsAndAds\Internal\DependencyManagement\AbstractServiceProvider->share_with_tags('Automattic\\WooC...')
+#4 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\vendor\league\container\src\ServiceProvider\ServiceProviderAggregate.php(102): Automattic\WooCommerce\GoogleListingsAndAds\Internal\DependencyManagement\CoreServiceProvider->register()
+#5 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\vendor\league\container\src\Container.php(172): Automattic\WooCommerce\GoogleListingsAndAds\Vendor\League\Container\ServiceProvider\ServiceProviderAggregate->register('Automattic\\WooC...')
+#6 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Container.php(90): Automattic\WooCommerce\GoogleListingsAndAds\Vendor\League\Container\Container->get('Automattic\\WooC...')
+#7 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Infrastructure\GoogleListingsAndAdsPlugin.php(105): Automattic\WooCommerce\GoogleListingsAndAds\Container->get('Automattic\\WooC...')
+#8 C:\xampp\htdocs\cuahangsach\wp-includes\class-wp-hook.php(324): Automattic\WooCommerce\GoogleListingsAndAds\Infrastructure\GoogleListingsAndAdsPlugin->Automattic\WooCommerce\GoogleListingsAndAds\Infrastructure\{closure}('')
+#9 C:\xampp\htdocs\cuahangsach\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#10 C:\xampp\htdocs\cuahangsach\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#11 C:\xampp\htdocs\cuahangsach\wp-settings.php(643): do_action('init')
+#12 C:\xampp\htdocs\cuahangsach\wp-config.php(96): require_once('C:\\xampp\\htdocs...')
+#13 C:\xampp\htdocs\cuahangsach\wp-load.php(50): require_once('C:\\xampp\\htdocs...')
+#14 C:\xampp\htdocs\cuahangsach\wp-blog-header.php(13): require_once('C:\\xampp\\htdocs...')
+#15 C:\xampp\htdocs\cuahangsach\index.php(17): require('C:\\xampp\\htdocs...')
+#16 {main}
+  thrown in C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\TaskList\CompleteSetupTask.php on line 18
+
+2023-12-10T11:23:44+00:00 CRITICAL Uncaught Error: Class "Automattic\WooCommerce\Admin\Features\OnboardingTasks\Task" not found in C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\TaskList\CompleteSetupTask.php:18
+Stack trace:
+#0 C:\xampp\htdocs\cuahangsach\wp-content\plugins\jetpack\vendor\jetpack-autoloader\class-php-autoloader.php(90): require()
+#1 [internal function]: Automattic\Jetpack\Autoloader\jpf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ12_9\al3_0_2\PHP_Autoloader::load_class('Automattic\\WooC...')
+#2 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Internal\DependencyManagement\AbstractServiceProvider.php(73): class_implements('Automattic\\WooC...')
+#3 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Internal\DependencyManagement\CoreServiceProvider.php(300): Automattic\WooCommerce\GoogleListingsAndAds\Internal\DependencyManagement\AbstractServiceProvider->share_with_tags('Automattic\\WooC...')
+#4 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\vendor\league\container\src\ServiceProvider\ServiceProviderAggregate.php(102): Automattic\WooCommerce\GoogleListingsAndAds\Internal\DependencyManagement\CoreServiceProvider->register()
+#5 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\vendor\league\container\src\Container.php(172): Automattic\WooCommerce\GoogleListingsAndAds\Vendor\League\Container\ServiceProvider\ServiceProviderAggregate->register('Automattic\\WooC...')
+#6 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Container.php(90): Automattic\WooCommerce\GoogleListingsAndAds\Vendor\League\Container\Container->get('Automattic\\WooC...')
+#7 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Infrastructure\GoogleListingsAndAdsPlugin.php(105): Automattic\WooCommerce\GoogleListingsAndAds\Container->get('Automattic\\WooC...')
+#8 C:\xampp\htdocs\cuahangsach\wp-includes\class-wp-hook.php(324): Automattic\WooCommerce\GoogleListingsAndAds\Infrastructure\GoogleListingsAndAdsPlugin->Automattic\WooCommerce\GoogleListingsAndAds\Infrastructure\{closure}('')
+#9 C:\xampp\htdocs\cuahangsach\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#10 C:\xampp\htdocs\cuahangsach\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#11 C:\xampp\htdocs\cuahangsach\wp-settings.php(643): do_action('init')
+#12 C:\xampp\htdocs\cuahangsach\wp-config.php(96): require_once('C:\\xampp\\htdocs...')
+#13 C:\xampp\htdocs\cuahangsach\wp-load.php(50): require_once('C:\\xampp\\htdocs...')
+#14 C:\xampp\htdocs\cuahangsach\wp-admin\admin.php(34): require_once('C:\\xampp\\htdocs...')
+#15 C:\xampp\htdocs\cuahangsach\wp-admin\index.php(10): require_once('C:\\xampp\\htdocs...')
+#16 {main}
+  thrown in C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\TaskList\CompleteSetupTask.php on line 18
+
+2023-12-10T11:23:44+00:00 CRITICAL Uncaught Error: Class "Automattic\WooCommerce\Admin\Features\OnboardingTasks\Task" not found in C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\TaskList\CompleteSetupTask.php:18
+Stack trace:
+#0 C:\xampp\htdocs\cuahangsach\wp-content\plugins\jetpack\vendor\jetpack-autoloader\class-php-autoloader.php(90): require()
+#1 [internal function]: Automattic\Jetpack\Autoloader\jpf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ12_9\al3_0_2\PHP_Autoloader::load_class('Automattic\\WooC...')
+#2 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Internal\DependencyManagement\AbstractServiceProvider.php(73): class_implements('Automattic\\WooC...')
+#3 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Internal\DependencyManagement\CoreServiceProvider.php(300): Automattic\WooCommerce\GoogleListingsAndAds\Internal\DependencyManagement\AbstractServiceProvider->share_with_tags('Automattic\\WooC...')
+#4 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\vendor\league\container\src\ServiceProvider\ServiceProviderAggregate.php(102): Automattic\WooCommerce\GoogleListingsAndAds\Internal\DependencyManagement\CoreServiceProvider->register()
+#5 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\vendor\league\container\src\Container.php(172): Automattic\WooCommerce\GoogleListingsAndAds\Vendor\League\Container\ServiceProvider\ServiceProviderAggregate->register('Automattic\\WooC...')
+#6 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Container.php(90): Automattic\WooCommerce\GoogleListingsAndAds\Vendor\League\Container\Container->get('Automattic\\WooC...')
+#7 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Infrastructure\GoogleListingsAndAdsPlugin.php(105): Automattic\WooCommerce\GoogleListingsAndAds\Container->get('Automattic\\WooC...')
+#8 C:\xampp\htdocs\cuahangsach\wp-includes\class-wp-hook.php(324): Automattic\WooCommerce\GoogleListingsAndAds\Infrastructure\GoogleListingsAndAdsPlugin->Automattic\WooCommerce\GoogleListingsAndAds\Infrastructure\{closure}('')
+#9 C:\xampp\htdocs\cuahangsach\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#10 C:\xampp\htdocs\cuahangsach\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#11 C:\xampp\htdocs\cuahangsach\wp-settings.php(643): do_action('init')
+#12 C:\xampp\htdocs\cuahangsach\wp-config.php(96): require_once('C:\\xampp\\htdocs...')
+#13 C:\xampp\htdocs\cuahangsach\wp-load.php(50): require_once('C:\\xampp\\htdocs...')
+#14 C:\xampp\htdocs\cuahangsach\wp-admin\admin.php(34): require_once('C:\\xampp\\htdocs...')
+#15 C:\xampp\htdocs\cuahangsach\wp-admin\index.php(10): require_once('C:\\xampp\\htdocs...')
+#16 {main}
+  thrown in C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\TaskList\CompleteSetupTask.php on line 18
+
+2023-12-10T11:24:40+00:00 CRITICAL Uncaught Error: Class "Automattic\WooCommerce\Admin\Features\OnboardingTasks\Task" not found in C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\TaskList\CompleteSetupTask.php:18
+Stack trace:
+#0 C:\xampp\htdocs\cuahangsach\wp-content\plugins\jetpack\vendor\jetpack-autoloader\class-php-autoloader.php(90): require()
+#1 [internal function]: Automattic\Jetpack\Autoloader\jpf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ12_9\al3_0_2\PHP_Autoloader::load_class('Automattic\\WooC...')
+#2 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Internal\DependencyManagement\AbstractServiceProvider.php(73): class_implements('Automattic\\WooC...')
+#3 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Internal\DependencyManagement\CoreServiceProvider.php(300): Automattic\WooCommerce\GoogleListingsAndAds\Internal\DependencyManagement\AbstractServiceProvider->share_with_tags('Automattic\\WooC...')
+#4 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\vendor\league\container\src\ServiceProvider\ServiceProviderAggregate.php(102): Automattic\WooCommerce\GoogleListingsAndAds\Internal\DependencyManagement\CoreServiceProvider->register()
+#5 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\vendor\league\container\src\Container.php(172): Automattic\WooCommerce\GoogleListingsAndAds\Vendor\League\Container\ServiceProvider\ServiceProviderAggregate->register('Automattic\\WooC...')
+#6 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Container.php(90): Automattic\WooCommerce\GoogleListingsAndAds\Vendor\League\Container\Container->get('Automattic\\WooC...')
+#7 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Infrastructure\GoogleListingsAndAdsPlugin.php(105): Automattic\WooCommerce\GoogleListingsAndAds\Container->get('Automattic\\WooC...')
+#8 C:\xampp\htdocs\cuahangsach\wp-includes\class-wp-hook.php(324): Automattic\WooCommerce\GoogleListingsAndAds\Infrastructure\GoogleListingsAndAdsPlugin->Automattic\WooCommerce\GoogleListingsAndAds\Infrastructure\{closure}('')
+#9 C:\xampp\htdocs\cuahangsach\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#10 C:\xampp\htdocs\cuahangsach\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#11 C:\xampp\htdocs\cuahangsach\wp-settings.php(643): do_action('init')
+#12 C:\xampp\htdocs\cuahangsach\wp-config.php(96): require_once('C:\\xampp\\htdocs...')
+#13 C:\xampp\htdocs\cuahangsach\wp-load.php(50): require_once('C:\\xampp\\htdocs...')
+#14 C:\xampp\htdocs\cuahangsach\wp-admin\admin.php(34): require_once('C:\\xampp\\htdocs...')
+#15 C:\xampp\htdocs\cuahangsach\wp-admin\index.php(10): require_once('C:\\xampp\\htdocs...')
+#16 {main}
+  thrown in C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\TaskList\CompleteSetupTask.php on line 18
+
+2023-12-10T11:24:47+00:00 CRITICAL Uncaught Error: Failed opening required 'C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads/src/TaskList/CompleteSetupTask.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\cuahangsach\wp-content\plugins\jetpack\vendor\jetpack-autoloader\class-php-autoloader.php:90
+Stack trace:
+#0 [internal function]: Automattic\Jetpack\Autoloader\jpf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ12_9\al3_0_2\PHP_Autoloader::load_class('Automattic\\WooC...')
+#1 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Internal\DependencyManagement\AbstractServiceProvider.php(73): class_implements('Automattic\\WooC...')
+#2 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Internal\DependencyManagement\CoreServiceProvider.php(300): Automattic\WooCommerce\GoogleListingsAndAds\Internal\DependencyManagement\AbstractServiceProvider->share_with_tags('Automattic\\WooC...')
+#3 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\vendor\league\container\src\ServiceProvider\ServiceProviderAggregate.php(102): Automattic\WooCommerce\GoogleListingsAndAds\Internal\DependencyManagement\CoreServiceProvider->register()
+#4 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\vendor\league\container\src\Container.php(172): Automattic\WooCommerce\GoogleListingsAndAds\Vendor\League\Container\ServiceProvider\ServiceProviderAggregate->register('Automattic\\WooC...')
+#5 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Container.php(90): Automattic\WooCommerce\GoogleListingsAndAds\Vendor\League\Container\Container->get('Automattic\\WooC...')
+#6 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Infrastructure\GoogleListingsAndAdsPlugin.php(105): Automattic\WooCommerce\GoogleListingsAndAds\Container->get('Automattic\\WooC...')
+#7 C:\xampp\htdocs\cuahangsach\wp-includes\class-wp-hook.php(324): Automattic\WooCommerce\GoogleListingsAndAds\Infrastructure\GoogleListingsAndAdsPlugin->Automattic\WooCommerce\GoogleListingsAndAds\Infrastructure\{closure}('')
+#8 C:\xampp\htdocs\cuahangsach\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#9 C:\xampp\htdocs\cuahangsach\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#10 C:\xampp\htdocs\cuahangsach\wp-settings.php(643): do_action('init')
+#11 C:\xampp\htdocs\cuahangsach\wp-config.php(96): require_once('C:\\xampp\\htdocs...')
+#12 C:\xampp\htdocs\cuahangsach\wp-load.php(50): require_once('C:\\xampp\\htdocs...')
+#13 C:\xampp\htdocs\cuahangsach\wp-admin\admin.php(34): require_once('C:\\xampp\\htdocs...')
+#14 C:\xampp\htdocs\cuahangsach\wp-admin\index.php(10): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+  thrown in C:\xampp\htdocs\cuahangsach\wp-content\plugins\jetpack\vendor\jetpack-autoloader\class-php-autoloader.php on line 90
+
+2023-12-10T11:24:48+00:00 CRITICAL Uncaught Error: Failed opening required 'C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads/src/TaskList/CompleteSetupTask.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\cuahangsach\wp-content\plugins\jetpack\vendor\jetpack-autoloader\class-php-autoloader.php:90
+Stack trace:
+#0 [internal function]: Automattic\Jetpack\Autoloader\jpf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ12_9\al3_0_2\PHP_Autoloader::load_class('Automattic\\WooC...')
+#1 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Internal\DependencyManagement\AbstractServiceProvider.php(73): class_implements('Automattic\\WooC...')
+#2 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Internal\DependencyManagement\CoreServiceProvider.php(300): Automattic\WooCommerce\GoogleListingsAndAds\Internal\DependencyManagement\AbstractServiceProvider->share_with_tags('Automattic\\WooC...')
+#3 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\vendor\league\container\src\ServiceProvider\ServiceProviderAggregate.php(102): Automattic\WooCommerce\GoogleListingsAndAds\Internal\DependencyManagement\CoreServiceProvider->register()
+#4 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\vendor\league\container\src\Container.php(172): Automattic\WooCommerce\GoogleListingsAndAds\Vendor\League\Container\ServiceProvider\ServiceProviderAggregate->register('Automattic\\WooC...')
+#5 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Container.php(90): Automattic\WooCommerce\GoogleListingsAndAds\Vendor\League\Container\Container->get('Automattic\\WooC...')
+#6 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Infrastructure\GoogleListingsAndAdsPlugin.php(105): Automattic\WooCommerce\GoogleListingsAndAds\Container->get('Automattic\\WooC...')
+#7 C:\xampp\htdocs\cuahangsach\wp-includes\class-wp-hook.php(324): Automattic\WooCommerce\GoogleListingsAndAds\Infrastructure\GoogleListingsAndAdsPlugin->Automattic\WooCommerce\GoogleListingsAndAds\Infrastructure\{closure}('')
+#8 C:\xampp\htdocs\cuahangsach\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#9 C:\xampp\htdocs\cuahangsach\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#10 C:\xampp\htdocs\cuahangsach\wp-settings.php(643): do_action('init')
+#11 C:\xampp\htdocs\cuahangsach\wp-config.php(96): require_once('C:\\xampp\\htdocs...')
+#12 C:\xampp\htdocs\cuahangsach\wp-load.php(50): require_once('C:\\xampp\\htdocs...')
+#13 C:\xampp\htdocs\cuahangsach\wp-admin\admin.php(34): require_once('C:\\xampp\\htdocs...')
+#14 C:\xampp\htdocs\cuahangsach\wp-admin\index.php(10): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+  thrown in C:\xampp\htdocs\cuahangsach\wp-content\plugins\jetpack\vendor\jetpack-autoloader\class-php-autoloader.php on line 90
+
+2023-12-10T11:24:52+00:00 CRITICAL Uncaught Error: Class "Automattic\WooCommerce\Admin\Features\OnboardingTasks\Task" not found in C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\TaskList\CompleteSetupTask.php:18
+Stack trace:
+#0 C:\xampp\htdocs\cuahangsach\wp-content\plugins\jetpack\vendor\jetpack-autoloader\class-php-autoloader.php(90): require()
+#1 [internal function]: Automattic\Jetpack\Autoloader\jpf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ12_9\al3_0_2\PHP_Autoloader::load_class('Automattic\\WooC...')
+#2 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Internal\DependencyManagement\AbstractServiceProvider.php(73): class_implements('Automattic\\WooC...')
+#3 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Internal\DependencyManagement\CoreServiceProvider.php(300): Automattic\WooCommerce\GoogleListingsAndAds\Internal\DependencyManagement\AbstractServiceProvider->share_with_tags('Automattic\\WooC...')
+#4 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\vendor\league\container\src\ServiceProvider\ServiceProviderAggregate.php(102): Automattic\WooCommerce\GoogleListingsAndAds\Internal\DependencyManagement\CoreServiceProvider->register()
+#5 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\vendor\league\container\src\Container.php(172): Automattic\WooCommerce\GoogleListingsAndAds\Vendor\League\Container\ServiceProvider\ServiceProviderAggregate->register('Automattic\\WooC...')
+#6 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Container.php(90): Automattic\WooCommerce\GoogleListingsAndAds\Vendor\League\Container\Container->get('Automattic\\WooC...')
+#7 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Infrastructure\GoogleListingsAndAdsPlugin.php(105): Automattic\WooCommerce\GoogleListingsAndAds\Container->get('Automattic\\WooC...')
+#8 C:\xampp\htdocs\cuahangsach\wp-includes\class-wp-hook.php(324): Automattic\WooCommerce\GoogleListingsAndAds\Infrastructure\GoogleListingsAndAdsPlugin->Automattic\WooCommerce\GoogleListingsAndAds\Infrastructure\{closure}('')
+#9 C:\xampp\htdocs\cuahangsach\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#10 C:\xampp\htdocs\cuahangsach\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#11 C:\xampp\htdocs\cuahangsach\wp-settings.php(643): do_action('init')
+#12 C:\xampp\htdocs\cuahangsach\wp-config.php(96): require_once('C:\\xampp\\htdocs...')
+#13 C:\xampp\htdocs\cuahangsach\wp-load.php(50): require_once('C:\\xampp\\htdocs...')
+#14 C:\xampp\htdocs\cuahangsach\wp-admin\admin.php(34): require_once('C:\\xampp\\htdocs...')
+#15 C:\xampp\htdocs\cuahangsach\wp-admin\index.php(10): require_once('C:\\xampp\\htdocs...')
+#16 {main}
+  thrown in C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\TaskList\CompleteSetupTask.php on line 18
+
+2023-12-10T11:25:00+00:00 CRITICAL Uncaught Error: Failed opening required 'C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads/src/TaskList/CompleteSetupTask.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\cuahangsach\wp-content\plugins\jetpack\vendor\jetpack-autoloader\class-php-autoloader.php:90
+Stack trace:
+#0 [internal function]: Automattic\Jetpack\Autoloader\jpf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ12_9\al3_0_2\PHP_Autoloader::load_class('Automattic\\WooC...')
+#1 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Internal\DependencyManagement\AbstractServiceProvider.php(73): class_implements('Automattic\\WooC...')
+#2 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Internal\DependencyManagement\CoreServiceProvider.php(300): Automattic\WooCommerce\GoogleListingsAndAds\Internal\DependencyManagement\AbstractServiceProvider->share_with_tags('Automattic\\WooC...')
+#3 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\vendor\league\container\src\ServiceProvider\ServiceProviderAggregate.php(102): Automattic\WooCommerce\GoogleListingsAndAds\Internal\DependencyManagement\CoreServiceProvider->register()
+#4 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\vendor\league\container\src\Container.php(172): Automattic\WooCommerce\GoogleListingsAndAds\Vendor\League\Container\ServiceProvider\ServiceProviderAggregate->register('Automattic\\WooC...')
+#5 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Container.php(90): Automattic\WooCommerce\GoogleListingsAndAds\Vendor\League\Container\Container->get('Automattic\\WooC...')
+#6 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Infrastructure\GoogleListingsAndAdsPlugin.php(105): Automattic\WooCommerce\GoogleListingsAndAds\Container->get('Automattic\\WooC...')
+#7 C:\xampp\htdocs\cuahangsach\wp-includes\class-wp-hook.php(324): Automattic\WooCommerce\GoogleListingsAndAds\Infrastructure\GoogleListingsAndAdsPlugin->Automattic\WooCommerce\GoogleListingsAndAds\Infrastructure\{closure}('')
+#8 C:\xampp\htdocs\cuahangsach\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#9 C:\xampp\htdocs\cuahangsach\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#10 C:\xampp\htdocs\cuahangsach\wp-settings.php(643): do_action('init')
+#11 C:\xampp\htdocs\cuahangsach\wp-config.php(96): require_once('C:\\xampp\\htdocs...')
+#12 C:\xampp\htdocs\cuahangsach\wp-load.php(50): require_once('C:\\xampp\\htdocs...')
+#13 C:\xampp\htdocs\cuahangsach\wp-admin\admin.php(34): require_once('C:\\xampp\\htdocs...')
+#14 C:\xampp\htdocs\cuahangsach\wp-admin\index.php(10): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+  thrown in C:\xampp\htdocs\cuahangsach\wp-content\plugins\jetpack\vendor\jetpack-autoloader\class-php-autoloader.php on line 90
+
+2023-12-10T11:25:12+00:00 CRITICAL Uncaught Error: Class "Automattic\WooCommerce\Admin\Features\OnboardingTasks\Task" not found in C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\TaskList\CompleteSetupTask.php:18
+Stack trace:
+#0 C:\xampp\htdocs\cuahangsach\wp-content\plugins\jetpack\vendor\jetpack-autoloader\class-php-autoloader.php(90): require()
+#1 [internal function]: Automattic\Jetpack\Autoloader\jpf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ12_9\al3_0_2\PHP_Autoloader::load_class('Automattic\\WooC...')
+#2 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Internal\DependencyManagement\AbstractServiceProvider.php(73): class_implements('Automattic\\WooC...')
+#3 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Internal\DependencyManagement\CoreServiceProvider.php(300): Automattic\WooCommerce\GoogleListingsAndAds\Internal\DependencyManagement\AbstractServiceProvider->share_with_tags('Automattic\\WooC...')
+#4 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\vendor\league\container\src\ServiceProvider\ServiceProviderAggregate.php(102): Automattic\WooCommerce\GoogleListingsAndAds\Internal\DependencyManagement\CoreServiceProvider->register()
+#5 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\vendor\league\container\src\Container.php(172): Automattic\WooCommerce\GoogleListingsAndAds\Vendor\League\Container\ServiceProvider\ServiceProviderAggregate->register('Automattic\\WooC...')
+#6 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Container.php(90): Automattic\WooCommerce\GoogleListingsAndAds\Vendor\League\Container\Container->get('Automattic\\WooC...')
+#7 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Infrastructure\GoogleListingsAndAdsPlugin.php(105): Automattic\WooCommerce\GoogleListingsAndAds\Container->get('Automattic\\WooC...')
+#8 C:\xampp\htdocs\cuahangsach\wp-includes\class-wp-hook.php(324): Automattic\WooCommerce\GoogleListingsAndAds\Infrastructure\GoogleListingsAndAdsPlugin->Automattic\WooCommerce\GoogleListingsAndAds\Infrastructure\{closure}('')
+#9 C:\xampp\htdocs\cuahangsach\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#10 C:\xampp\htdocs\cuahangsach\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#11 C:\xampp\htdocs\cuahangsach\wp-settings.php(643): do_action('init')
+#12 C:\xampp\htdocs\cuahangsach\wp-config.php(96): require_once('C:\\xampp\\htdocs...')
+#13 C:\xampp\htdocs\cuahangsach\wp-load.php(50): require_once('C:\\xampp\\htdocs...')
+#14 C:\xampp\htdocs\cuahangsach\wp-admin\admin.php(34): require_once('C:\\xampp\\htdocs...')
+#15 C:\xampp\htdocs\cuahangsach\wp-admin\index.php(10): require_once('C:\\xampp\\htdocs...')
+#16 {main}
+  thrown in C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\TaskList\CompleteSetupTask.php on line 18
+
+2023-12-10T11:25:17+00:00 CRITICAL Uncaught Error: Class "Automattic\WooCommerce\Admin\Features\OnboardingTasks\Task" not found in C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\TaskList\CompleteSetupTask.php:18
+Stack trace:
+#0 C:\xampp\htdocs\cuahangsach\wp-content\plugins\jetpack\vendor\jetpack-autoloader\class-php-autoloader.php(90): require()
+#1 [internal function]: Automattic\Jetpack\Autoloader\jpf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ12_9\al3_0_2\PHP_Autoloader::load_class('Automattic\\WooC...')
+#2 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Internal\DependencyManagement\AbstractServiceProvider.php(73): class_implements('Automattic\\WooC...')
+#3 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Internal\DependencyManagement\CoreServiceProvider.php(300): Automattic\WooCommerce\GoogleListingsAndAds\Internal\DependencyManagement\AbstractServiceProvider->share_with_tags('Automattic\\WooC...')
+#4 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\vendor\league\container\src\ServiceProvider\ServiceProviderAggregate.php(102): Automattic\WooCommerce\GoogleListingsAndAds\Internal\DependencyManagement\CoreServiceProvider->register()
+#5 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\vendor\league\container\src\Container.php(172): Automattic\WooCommerce\GoogleListingsAndAds\Vendor\League\Container\ServiceProvider\ServiceProviderAggregate->register('Automattic\\WooC...')
+#6 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Container.php(90): Automattic\WooCommerce\GoogleListingsAndAds\Vendor\League\Container\Container->get('Automattic\\WooC...')
+#7 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Infrastructure\GoogleListingsAndAdsPlugin.php(105): Automattic\WooCommerce\GoogleListingsAndAds\Container->get('Automattic\\WooC...')
+#8 C:\xampp\htdocs\cuahangsach\wp-includes\class-wp-hook.php(324): Automattic\WooCommerce\GoogleListingsAndAds\Infrastructure\GoogleListingsAndAdsPlugin->Automattic\WooCommerce\GoogleListingsAndAds\Infrastructure\{closure}('')
+#9 C:\xampp\htdocs\cuahangsach\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#10 C:\xampp\htdocs\cuahangsach\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#11 C:\xampp\htdocs\cuahangsach\wp-settings.php(643): do_action('init')
+#12 C:\xampp\htdocs\cuahangsach\wp-config.php(96): require_once('C:\\xampp\\htdocs...')
+#13 C:\xampp\htdocs\cuahangsach\wp-load.php(50): require_once('C:\\xampp\\htdocs...')
+#14 C:\xampp\htdocs\cuahangsach\wp-admin\admin.php(34): require_once('C:\\xampp\\htdocs...')
+#15 C:\xampp\htdocs\cuahangsach\wp-admin\index.php(10): require_once('C:\\xampp\\htdocs...')
+#16 {main}
+  thrown in C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\TaskList\CompleteSetupTask.php on line 18
+
+2023-12-10T11:25:18+00:00 CRITICAL Uncaught Error: Class "Automattic\WooCommerce\Admin\Features\OnboardingTasks\Task" not found in C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\TaskList\CompleteSetupTask.php:18
+Stack trace:
+#0 C:\xampp\htdocs\cuahangsach\wp-content\plugins\jetpack\vendor\jetpack-autoloader\class-php-autoloader.php(90): require()
+#1 [internal function]: Automattic\Jetpack\Autoloader\jpf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ12_9\al3_0_2\PHP_Autoloader::load_class('Automattic\\WooC...')
+#2 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Internal\DependencyManagement\AbstractServiceProvider.php(73): class_implements('Automattic\\WooC...')
+#3 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Internal\DependencyManagement\CoreServiceProvider.php(300): Automattic\WooCommerce\GoogleListingsAndAds\Internal\DependencyManagement\AbstractServiceProvider->share_with_tags('Automattic\\WooC...')
+#4 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\vendor\league\container\src\ServiceProvider\ServiceProviderAggregate.php(102): Automattic\WooCommerce\GoogleListingsAndAds\Internal\DependencyManagement\CoreServiceProvider->register()
+#5 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\vendor\league\container\src\Container.php(172): Automattic\WooCommerce\GoogleListingsAndAds\Vendor\League\Container\ServiceProvider\ServiceProviderAggregate->register('Automattic\\WooC...')
+#6 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Container.php(90): Automattic\WooCommerce\GoogleListingsAndAds\Vendor\League\Container\Container->get('Automattic\\WooC...')
+#7 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Infrastructure\GoogleListingsAndAdsPlugin.php(105): Automattic\WooCommerce\GoogleListingsAndAds\Container->get('Automattic\\WooC...')
+#8 C:\xampp\htdocs\cuahangsach\wp-includes\class-wp-hook.php(324): Automattic\WooCommerce\GoogleListingsAndAds\Infrastructure\GoogleListingsAndAdsPlugin->Automattic\WooCommerce\GoogleListingsAndAds\Infrastructure\{closure}('')
+#9 C:\xampp\htdocs\cuahangsach\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#10 C:\xampp\htdocs\cuahangsach\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#11 C:\xampp\htdocs\cuahangsach\wp-settings.php(643): do_action('init')
+#12 C:\xampp\htdocs\cuahangsach\wp-config.php(96): require_once('C:\\xampp\\htdocs...')
+#13 C:\xampp\htdocs\cuahangsach\wp-load.php(50): require_once('C:\\xampp\\htdocs...')
+#14 C:\xampp\htdocs\cuahangsach\wp-admin\admin.php(34): require_once('C:\\xampp\\htdocs...')
+#15 C:\xampp\htdocs\cuahangsach\wp-admin\index.php(10): require_once('C:\\xampp\\htdocs...')
+#16 {main}
+  thrown in C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\TaskList\CompleteSetupTask.php on line 18
+
+2023-12-10T11:25:43+00:00 CRITICAL Uncaught Error: Class "Automattic\WooCommerce\Admin\Features\OnboardingTasks\Task" not found in C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\TaskList\CompleteSetupTask.php:18
+Stack trace:
+#0 C:\xampp\htdocs\cuahangsach\wp-content\plugins\jetpack\vendor\jetpack-autoloader\class-php-autoloader.php(90): require()
+#1 [internal function]: Automattic\Jetpack\Autoloader\jpf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ12_9\al3_0_2\PHP_Autoloader::load_class('Automattic\\WooC...')
+#2 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Internal\DependencyManagement\AbstractServiceProvider.php(73): class_implements('Automattic\\WooC...')
+#3 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Internal\DependencyManagement\CoreServiceProvider.php(300): Automattic\WooCommerce\GoogleListingsAndAds\Internal\DependencyManagement\AbstractServiceProvider->share_with_tags('Automattic\\WooC...')
+#4 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\vendor\league\container\src\ServiceProvider\ServiceProviderAggregate.php(102): Automattic\WooCommerce\GoogleListingsAndAds\Internal\DependencyManagement\CoreServiceProvider->register()
+#5 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\vendor\league\container\src\Container.php(172): Automattic\WooCommerce\GoogleListingsAndAds\Vendor\League\Container\ServiceProvider\ServiceProviderAggregate->register('Automattic\\WooC...')
+#6 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Container.php(90): Automattic\WooCommerce\GoogleListingsAndAds\Vendor\League\Container\Container->get('Automattic\\WooC...')
+#7 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Infrastructure\GoogleListingsAndAdsPlugin.php(105): Automattic\WooCommerce\GoogleListingsAndAds\Container->get('Automattic\\WooC...')
+#8 C:\xampp\htdocs\cuahangsach\wp-includes\class-wp-hook.php(324): Automattic\WooCommerce\GoogleListingsAndAds\Infrastructure\GoogleListingsAndAdsPlugin->Automattic\WooCommerce\GoogleListingsAndAds\Infrastructure\{closure}('')
+#9 C:\xampp\htdocs\cuahangsach\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#10 C:\xampp\htdocs\cuahangsach\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#11 C:\xampp\htdocs\cuahangsach\wp-settings.php(643): do_action('init')
+#12 C:\xampp\htdocs\cuahangsach\wp-config.php(96): require_once('C:\\xampp\\htdocs...')
+#13 C:\xampp\htdocs\cuahangsach\wp-load.php(50): require_once('C:\\xampp\\htdocs...')
+#14 C:\xampp\htdocs\cuahangsach\wp-admin\admin.php(34): require_once('C:\\xampp\\htdocs...')
+#15 C:\xampp\htdocs\cuahangsach\wp-admin\index.php(10): require_once('C:\\xampp\\htdocs...')
+#16 {main}
+  thrown in C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\TaskList\CompleteSetupTask.php on line 18
+
+2023-12-10T11:27:23+00:00 CRITICAL Uncaught Error: Class "Automattic\WooCommerce\Admin\Features\OnboardingTasks\Task" not found in C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\TaskList\CompleteSetupTask.php:18
+Stack trace:
+#0 C:\xampp\htdocs\cuahangsach\wp-content\plugins\jetpack\vendor\jetpack-autoloader\class-php-autoloader.php(90): require()
+#1 [internal function]: Automattic\Jetpack\Autoloader\jpf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ12_9\al3_0_2\PHP_Autoloader::load_class('Automattic\\WooC...')
+#2 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Internal\DependencyManagement\AbstractServiceProvider.php(73): class_implements('Automattic\\WooC...')
+#3 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Internal\DependencyManagement\CoreServiceProvider.php(300): Automattic\WooCommerce\GoogleListingsAndAds\Internal\DependencyManagement\AbstractServiceProvider->share_with_tags('Automattic\\WooC...')
+#4 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\vendor\league\container\src\ServiceProvider\ServiceProviderAggregate.php(102): Automattic\WooCommerce\GoogleListingsAndAds\Internal\DependencyManagement\CoreServiceProvider->register()
+#5 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\vendor\league\container\src\Container.php(172): Automattic\WooCommerce\GoogleListingsAndAds\Vendor\League\Container\ServiceProvider\ServiceProviderAggregate->register('Automattic\\WooC...')
+#6 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Container.php(90): Automattic\WooCommerce\GoogleListingsAndAds\Vendor\League\Container\Container->get('Automattic\\WooC...')
+#7 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Infrastructure\GoogleListingsAndAdsPlugin.php(105): Automattic\WooCommerce\GoogleListingsAndAds\Container->get('Automattic\\WooC...')
+#8 C:\xampp\htdocs\cuahangsach\wp-includes\class-wp-hook.php(324): Automattic\WooCommerce\GoogleListingsAndAds\Infrastructure\GoogleListingsAndAdsPlugin->Automattic\WooCommerce\GoogleListingsAndAds\Infrastructure\{closure}('')
+#9 C:\xampp\htdocs\cuahangsach\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#10 C:\xampp\htdocs\cuahangsach\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#11 C:\xampp\htdocs\cuahangsach\wp-settings.php(643): do_action('init')
+#12 C:\xampp\htdocs\cuahangsach\wp-config.php(96): require_once('C:\\xampp\\htdocs...')
+#13 C:\xampp\htdocs\cuahangsach\wp-load.php(50): require_once('C:\\xampp\\htdocs...')
+#14 C:\xampp\htdocs\cuahangsach\wp-blog-header.php(13): require_once('C:\\xampp\\htdocs...')
+#15 C:\xampp\htdocs\cuahangsach\index.php(17): require('C:\\xampp\\htdocs...')
+#16 {main}
+  thrown in C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\TaskList\CompleteSetupTask.php on line 18
+
+2023-12-10T11:27:38+00:00 CRITICAL Uncaught Error: Class "Automattic\WooCommerce\Admin\Features\OnboardingTasks\Task" not found in C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\TaskList\CompleteSetupTask.php:18
+Stack trace:
+#0 C:\xampp\htdocs\cuahangsach\wp-content\plugins\jetpack\vendor\jetpack-autoloader\class-php-autoloader.php(90): require()
+#1 [internal function]: Automattic\Jetpack\Autoloader\jpf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ12_9\al3_0_2\PHP_Autoloader::load_class('Automattic\\WooC...')
+#2 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Internal\DependencyManagement\AbstractServiceProvider.php(73): class_implements('Automattic\\WooC...')
+#3 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Internal\DependencyManagement\CoreServiceProvider.php(300): Automattic\WooCommerce\GoogleListingsAndAds\Internal\DependencyManagement\AbstractServiceProvider->share_with_tags('Automattic\\WooC...')
+#4 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\vendor\league\container\src\ServiceProvider\ServiceProviderAggregate.php(102): Automattic\WooCommerce\GoogleListingsAndAds\Internal\DependencyManagement\CoreServiceProvider->register()
+#5 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\vendor\league\container\src\Container.php(172): Automattic\WooCommerce\GoogleListingsAndAds\Vendor\League\Container\ServiceProvider\ServiceProviderAggregate->register('Automattic\\WooC...')
+#6 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Container.php(90): Automattic\WooCommerce\GoogleListingsAndAds\Vendor\League\Container\Container->get('Automattic\\WooC...')
+#7 C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\Infrastructure\GoogleListingsAndAdsPlugin.php(105): Automattic\WooCommerce\GoogleListingsAndAds\Container->get('Automattic\\WooC...')
+#8 C:\xampp\htdocs\cuahangsach\wp-includes\class-wp-hook.php(324): Automattic\WooCommerce\GoogleListingsAndAds\Infrastructure\GoogleListingsAndAdsPlugin->Automattic\WooCommerce\GoogleListingsAndAds\Infrastructure\{closure}('')
+#9 C:\xampp\htdocs\cuahangsach\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#10 C:\xampp\htdocs\cuahangsach\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#11 C:\xampp\htdocs\cuahangsach\wp-settings.php(643): do_action('init')
+#12 C:\xampp\htdocs\cuahangsach\wp-config.php(96): require_once('C:\\xampp\\htdocs...')
+#13 C:\xampp\htdocs\cuahangsach\wp-load.php(50): require_once('C:\\xampp\\htdocs...')
+#14 C:\xampp\htdocs\cuahangsach\wp-blog-header.php(13): require_once('C:\\xampp\\htdocs...')
+#15 C:\xampp\htdocs\cuahangsach\index.php(17): require('C:\\xampp\\htdocs...')
+#16 {main}
+  thrown in C:\xampp\htdocs\cuahangsach\wp-content\plugins\google-listings-and-ads\src\TaskList\CompleteSetupTask.php on line 18
+
+2023-12-10T11:32:22+00:00 CRITICAL Array and string offset access syntax with curly braces is no longer supported in C:\xampp\htdocs\cuahangsach\wp-content\plugins\yith-woocommerce-catalog-mode\plugin-fw\lib\yit-plugin-gradients.php on line 443
+
+2023-12-10T11:32:24+00:00 CRITICAL Array and string offset access syntax with curly braces is no longer supported in C:\xampp\htdocs\cuahangsach\wp-content\plugins\yith-woocommerce-catalog-mode\plugin-fw\lib\yit-plugin-gradients.php on line 443
+
+2023-12-10T11:32:26+00:00 CRITICAL Array and string offset access syntax with curly braces is no longer supported in C:\xampp\htdocs\cuahangsach\wp-content\plugins\yith-woocommerce-catalog-mode\plugin-fw\lib\yit-plugin-gradients.php on line 443
+
+2023-12-10T11:32:27+00:00 CRITICAL Array and string offset access syntax with curly braces is no longer supported in C:\xampp\htdocs\cuahangsach\wp-content\plugins\yith-woocommerce-catalog-mode\plugin-fw\lib\yit-plugin-gradients.php on line 443
+
+2023-12-10T11:33:25+00:00 CRITICAL Array and string offset access syntax with curly braces is no longer supported in C:\xampp\htdocs\cuahangsach\wp-content\plugins\yith-woocommerce-compare\plugin-fw\lib\yit-plugin-gradients.php on line 443
+
+2023-12-10T11:34:01+00:00 CRITICAL Array and string offset access syntax with curly braces is no longer supported in C:\xampp\htdocs\cuahangsach\wp-content\plugins\yith-woocommerce-wishlist\plugin-fw\lib\yit-plugin-gradients.php on line 443
+
+2023-12-10T11:34:03+00:00 CRITICAL Array and string offset access syntax with curly braces is no longer supported in C:\xampp\htdocs\cuahangsach\wp-content\plugins\yith-woocommerce-wishlist\plugin-fw\lib\yit-plugin-gradients.php on line 443
+
+2023-12-10T11:34:04+00:00 CRITICAL Array and string offset access syntax with curly braces is no longer supported in C:\xampp\htdocs\cuahangsach\wp-content\plugins\yith-woocommerce-wishlist\plugin-fw\lib\yit-plugin-gradients.php on line 443
+
+2023-12-10T11:34:13+00:00 CRITICAL Array and string offset access syntax with curly braces is no longer supported in C:\xampp\htdocs\cuahangsach\wp-content\plugins\yith-woocommerce-wishlist\plugin-fw\lib\yit-plugin-gradients.php on line 443
+
+2023-12-10T11:34:14+00:00 CRITICAL Array and string offset access syntax with curly braces is no longer supported in C:\xampp\htdocs\cuahangsach\wp-content\plugins\yith-woocommerce-wishlist\plugin-fw\lib\yit-plugin-gradients.php on line 443
+
+2023-12-10T11:34:14+00:00 CRITICAL Array and string offset access syntax with curly braces is no longer supported in C:\xampp\htdocs\cuahangsach\wp-content\plugins\yith-woocommerce-wishlist\plugin-fw\lib\yit-plugin-gradients.php on line 443
+
+2023-12-10T11:34:14+00:00 CRITICAL Array and string offset access syntax with curly braces is no longer supported in C:\xampp\htdocs\cuahangsach\wp-content\plugins\yith-woocommerce-wishlist\plugin-fw\lib\yit-plugin-gradients.php on line 443
+
+2023-12-10T11:34:14+00:00 CRITICAL Array and string offset access syntax with curly braces is no longer supported in C:\xampp\htdocs\cuahangsach\wp-content\plugins\yith-woocommerce-wishlist\plugin-fw\lib\yit-plugin-gradients.php on line 443
+
+2023-12-10T11:34:15+00:00 CRITICAL Array and string offset access syntax with curly braces is no longer supported in C:\xampp\htdocs\cuahangsach\wp-content\plugins\yith-woocommerce-wishlist\plugin-fw\lib\yit-plugin-gradients.php on line 443
+
+2023-12-10T11:34:15+00:00 CRITICAL Array and string offset access syntax with curly braces is no longer supported in C:\xampp\htdocs\cuahangsach\wp-content\plugins\yith-woocommerce-wishlist\plugin-fw\lib\yit-plugin-gradients.php on line 443
+
+2023-12-10T11:34:15+00:00 CRITICAL Array and string offset access syntax with curly braces is no longer supported in C:\xampp\htdocs\cuahangsach\wp-content\plugins\yith-woocommerce-wishlist\plugin-fw\lib\yit-plugin-gradients.php on line 443
+
+2023-12-10T11:34:15+00:00 CRITICAL Array and string offset access syntax with curly braces is no longer supported in C:\xampp\htdocs\cuahangsach\wp-content\plugins\yith-woocommerce-wishlist\plugin-fw\lib\yit-plugin-gradients.php on line 443
+
+2023-12-10T11:34:15+00:00 CRITICAL Array and string offset access syntax with curly braces is no longer supported in C:\xampp\htdocs\cuahangsach\wp-content\plugins\yith-woocommerce-wishlist\plugin-fw\lib\yit-plugin-gradients.php on line 443
+
+2023-12-10T11:34:16+00:00 CRITICAL Array and string offset access syntax with curly braces is no longer supported in C:\xampp\htdocs\cuahangsach\wp-content\plugins\yith-woocommerce-wishlist\plugin-fw\lib\yit-plugin-gradients.php on line 443
+
+2023-12-10T11:34:16+00:00 CRITICAL Array and string offset access syntax with curly braces is no longer supported in C:\xampp\htdocs\cuahangsach\wp-content\plugins\yith-woocommerce-wishlist\plugin-fw\lib\yit-plugin-gradients.php on line 443
+
+2023-12-10T11:34:16+00:00 CRITICAL Array and string offset access syntax with curly braces is no longer supported in C:\xampp\htdocs\cuahangsach\wp-content\plugins\yith-woocommerce-wishlist\plugin-fw\lib\yit-plugin-gradients.php on line 443
+
+2023-12-10T11:34:16+00:00 CRITICAL Array and string offset access syntax with curly braces is no longer supported in C:\xampp\htdocs\cuahangsach\wp-content\plugins\yith-woocommerce-wishlist\plugin-fw\lib\yit-plugin-gradients.php on line 443
+
+2023-12-10T11:34:16+00:00 CRITICAL Array and string offset access syntax with curly braces is no longer supported in C:\xampp\htdocs\cuahangsach\wp-content\plugins\yith-woocommerce-wishlist\plugin-fw\lib\yit-plugin-gradients.php on line 443
+
+2023-12-10T11:34:17+00:00 CRITICAL Array and string offset access syntax with curly braces is no longer supported in C:\xampp\htdocs\cuahangsach\wp-content\plugins\yith-woocommerce-wishlist\plugin-fw\lib\yit-plugin-gradients.php on line 443
+
+2023-12-10T11:34:17+00:00 CRITICAL Array and string offset access syntax with curly braces is no longer supported in C:\xampp\htdocs\cuahangsach\wp-content\plugins\yith-woocommerce-wishlist\plugin-fw\lib\yit-plugin-gradients.php on line 443
+
